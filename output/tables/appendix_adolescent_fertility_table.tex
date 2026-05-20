@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+   \caption{\label{tab:appendix_adolescent_fertility} Appendix: Fixed Effects Models Controlling for Adolescent Fertility}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables:   & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:                 & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2           & 0.465$^{**}$   & 0.522                & 0.004\\   
+                             & (0.179)        & (1.54)               & (0.003)\\   
+      mobile\_l2             & 0.096          & 0.078                & 0.002\\   
+                             & (0.059)        & (0.590)              & (0.002)\\   
+      log\_gdp\_pc           & 6.78           & 101.0                & -0.012\\   
+                             & (13.5)         & (96.9)               & (0.216)\\   
+      fertility              & 13.6$^{***}$   & 117.9$^{*}$          & 0.285$^{**}$\\   
+                             & (4.44)         & (58.7)               & (0.108)\\   
+      adolescent\_fertility  & -0.080         & -0.651               & -0.002$^{*}$\\   
+                             & (0.064)        & (0.611)              & (0.001)\\   
+      water                  & -0.316         & -2.21                & -0.001\\   
+                             & (0.316)        & (3.43)               & (0.006)\\   
+      sanitation             & -0.355         & 2.52                 & -0.013$^{*}$\\   
+                             & (0.266)        & (3.25)               & (0.006)\\   
+      Baseline mean          & 82.69          & 457.49               & 2.76\\  
+      Country FE             & Yes            & Yes                  & Yes\\  
+      Year FE                & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country                & Yes            & Yes                  & Yes\\  
+      year                   & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations           & 607            & 590                  & 607\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\begin{flushleft}
+\footnotesize Notes: This table adds adolescent fertility as an additional demographic control to test whether the main estimates are sensitive to age-specific fertility pressures. All models include country and year fixed effects. Standard errors are clustered at the country level.
+\end{flushleft}
+\end{table}

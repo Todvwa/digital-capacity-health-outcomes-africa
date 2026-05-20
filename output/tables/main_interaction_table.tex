@@ -1,0 +1,41 @@
+\begin{table}[htbp]
+   \caption{\label{tab:main_interaction} Main Results: Internet Access, Nursing Capacity, and Health Outcomes}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables:   & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:                 & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2           & 0.215          & -0.359               & -0.001\\   
+                             & (0.191)        & (0.953)              & (0.003)\\   
+      nurses                 & -3.08          & -28.0$^{**}$         & -0.105$^{**}$\\   
+                             & (2.02)         & (13.2)               & (0.048)\\   
+      internet\_nurses\_l2   & 0.065$^{**}$   & 0.552$^{***}$        & 0.002$^{***}$\\   
+                             & (0.029)        & (0.188)              & (0.0008)\\   
+      log\_gdp\_pc           & 12.9           & 6.51                 & -0.139\\   
+                             & (13.7)         & (82.4)               & (0.186)\\   
+      fertility              & 10.0$^{**}$    & 63.8                 & 0.247$^{**}$\\   
+                             & (4.38)         & (39.5)               & (0.098)\\   
+      water                  & -0.290         & -3.27                & 0.001\\   
+                             & (0.293)        & (2.40)               & (0.006)\\   
+      sanitation             & 0.066          & 5.66$^{***}$         & -0.001\\   
+                             & (0.245)        & (1.95)               & (0.005)\\   
+      Baseline mean          & 73.53          & 404.71               & 2.58\\  
+      Country FE             & Yes            & Yes                  & Yes\\  
+      Year FE                & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country                & Yes            & Yes                  & Yes\\  
+      year                   & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations           & 485            & 478                  & 485\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\begin{flushleft}
+\footnotesize Notes: This table reports the interaction model in Equation~ref{eq:interaction}. The interaction between lagged internet use and nurses tests whether digital capacity and workforce capacity operate as complements or substitutes. All models include country and year fixed effects. Standard errors are clustered at the country level.
+\end{flushleft}
+\end{table}

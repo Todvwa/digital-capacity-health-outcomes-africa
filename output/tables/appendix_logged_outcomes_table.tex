@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+   \caption{\label{tab:appendix_logged_outcomes} Appendix: Logged Outcome Fixed Effects Models}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & log\_u5\_mortality   & log\_maternal\_mortality   & log\_neonatal\_mortality\\    
+      Model:               & (1)                  & (2)                        & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2         & -0.002               & -0.002                     & -0.002\\   
+                           & (0.001)              & (0.003)                    & (0.002)\\   
+      mobile\_l2           & 0.0001               & 0.001                      & 0.001$^{*}$\\   
+                           & (0.0005)             & (0.001)                    & (0.0007)\\   
+      log\_gdp\_pc         & -0.034               & -0.120                     & -0.011\\   
+                           & (0.096)              & (0.141)                    & (0.069)\\   
+      fertility            & 0.161$^{***}$        & 0.080                      & 0.099$^{**}$\\   
+                           & (0.045)              & (0.074)                    & (0.040)\\   
+      water                & -0.004               & -0.015$^{**}$              & 0.002\\   
+                           & (0.004)              & (0.007)                    & (0.003)\\   
+      sanitation           & -0.005               & 0.002                      & -0.005$^{*}$\\   
+                           & (0.004)              & (0.005)                    & (0.003)\\   
+      Baseline mean        & 4.18                 & 5.74                       & 0.92\\  
+      Country FE           & Yes                  & Yes                        & Yes\\  
+      Year FE              & Yes                  & Yes                        & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country              & Yes                  & Yes                        & Yes\\  
+      year                 & Yes                  & Yes                        & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 952                  & 931                        & 952\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}

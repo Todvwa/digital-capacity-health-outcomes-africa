@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+   \caption{\label{tab:appendix_residual_fertility} Appendix: Residual Fertility Models}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:               & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2         & 0.077          & 0.384                & -0.0006\\   
+                           & (0.101)        & (0.831)              & (0.003)\\   
+      mobile\_l2           & 0.071          & 0.156                & 0.003\\   
+                           & (0.061)        & (0.602)              & (0.002)\\   
+      log\_gdp\_pc         & -9.15          & -35.1                & -0.209\\   
+                           & (8.27)         & (62.0)               & (0.160)\\   
+      water                & -0.916$^{***}$ & -4.40                & -0.005\\   
+                           & (0.304)        & (2.79)               & (0.007)\\   
+      sanitation           & -0.039         & 3.09                 & -0.007\\   
+                           & (0.209)        & (2.28)               & (0.005)\\   
+      hiv\_prev            & 1.13           & 12.5                 & -0.021\\   
+                           & (1.14)         & (16.6)               & (0.044)\\   
+      health\_exp          & -0.962$^{**}$  & 2.65                 & -0.021\\   
+                           & (0.441)        & (5.46)               & (0.014)\\   
+      fertility\_resid     & 18.2$^{***}$   & 86.8                 & 0.296$^{***}$\\   
+                           & (3.32)         & (51.9)               & (0.106)\\   
+      Baseline mean        & 81.59          & 452.69               & 2.80\\  
+      Country FE           & Yes            & Yes                  & Yes\\  
+      Year FE              & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country              & Yes            & Yes                  & Yes\\  
+      year                 & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 866            & 845                  & 866\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}

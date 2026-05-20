@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+   \caption{\label{tab:appendix_first_difference} Appendix: First-Difference Models}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & du5\_mortality  & dmaternal\_mortality  & dneonatal\_mortality\\   
+      Model:               & (1)             & (2)                   & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      dinternet\_l2        & 0.045           & 0.011                 & 0.0001\\   
+                           & (0.044)         & (0.312)               & (0.0006)\\   
+      dmobile\_l2          & 0.035$^{*}$     & -0.221                & 0.0007$^{**}$\\   
+                           & (0.019)         & (0.228)               & (0.0003)\\   
+      dlog\_gdp\_pc        & 0.354           & -21.0                 & -0.023\\   
+                           & (4.95)          & (12.6)                & (0.048)\\   
+      dfertility           & 8.56$^{***}$    & 40.0                  & 0.127$^{**}$\\   
+                           & (2.72)          & (24.6)                & (0.058)\\   
+      dwater               & -1.14$^{***}$   & -4.94$^{*}$           & -0.008\\   
+                           & (0.334)         & (2.86)                & (0.006)\\   
+      dsanitation          & -0.172          & 3.88$^{*}$            & -0.008\\   
+                           & (0.256)         & (2.11)                & (0.005)\\   
+      Baseline mean        & -2.93           & -11.05                & -0.05\\  
+      Country FE           & Yes             & Yes                   & Yes\\  
+      Year FE              & Yes             & Yes                   & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      year                 & Yes             & Yes                   & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 891             & 871                   & 891\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}

@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+   \caption{\label{tab:baseline_distributed_lag} Baseline and Distributed Lag Fixed Effects Models}
+   \centering
+   \begin{tabular}{lcccccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & \multicolumn{2}{c}{u5\_mortality} & \multicolumn{2}{c}{maternal\_mortality} & \multicolumn{2}{c}{neonatal\_mortality}\\
+      Model:           & (1)           & (2)           & (3)         & (4)         & (5)           & (6)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_users  & 0.195$^{*}$   & 0.078         & 1.10        & 0.498       & 0.002         & 0.004\\   
+                       & (0.109)       & (0.122)       & (0.857)     & (0.942)     & (0.003)       & (0.004)\\   
+      mobile\_subs     & 0.117$^{*}$   & 0.043         & 0.327       & 0.175       & 0.004$^{**}$  & 0.002\\   
+                       & (0.061)       & (0.041)       & (0.613)     & (0.520)     & (0.002)       & (0.002)\\   
+      log\_gdp\_pc     & 2.27          & 3.43          & -6.56       & 33.0        & -0.068        & 0.010\\   
+                       & (8.38)        & (8.58)        & (57.0)      & (61.5)      & (0.170)       & (0.166)\\   
+      fertility        & 19.0$^{***}$  & 16.9$^{***}$  & 95.0$^{**}$ & 84.0$^{**}$ & 0.286$^{***}$ & 0.299$^{***}$\\   
+                       & (3.99)        & (3.63)        & (47.0)      & (39.8)      & (0.098)       & (0.097)\\   
+      water            & -0.751$^{**}$ & -0.656$^{**}$ & -2.80       & -3.26       & -0.003        & -0.0002\\   
+                       & (0.325)       & (0.321)       & (2.59)      & (2.51)      & (0.007)       & (0.007)\\   
+      sanitation       & -0.150        & -0.082        & 2.38        & 3.01        & -0.012$^{**}$ & -0.011$^{*}$\\   
+                       & (0.262)       & (0.249)       & (2.31)      & (2.11)      & (0.006)       & (0.006)\\   
+      internet\_l1     &               & -0.056        &             & -0.614      &               & -0.0008\\   
+                       &               & (0.067)       &             & (0.498)     &               & (0.001)\\   
+      internet\_l2     &               & 0.167         &             & 0.956       &               & -0.003\\   
+                       &               & (0.118)       &             & (0.977)     &               & (0.004)\\   
+      mobile\_l1       &               & 0.0001        &             & -0.118      &               & -0.0005\\   
+                       &               & (0.028)       &             & (0.267)     &               & (0.0007)\\   
+      mobile\_l2       &               & 0.041         &             & 0.073       &               & 0.002\\   
+                       &               & (0.046)       &             & (0.434)     &               & (0.001)\\   
+      Baseline mean    & 82.06         & 78.24         & 435.66      & 423.19      & 2.77          & 2.70\\  
+      Country FE       & Yes           & Yes           & Yes         & Yes         & Yes           & Yes\\  
+      Year FE          & Yes           & Yes           & Yes         & Yes         & Yes           & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country          & Yes           & Yes           & Yes         & Yes         & Yes           & Yes\\  
+      year             & Yes           & Yes           & Yes         & Yes         & Yes           & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations     & 1,037         & 918           & 1,014       & 897         & 1,037         & 918\\  
+      \midrule \midrule
+      \multicolumn{7}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{7}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\begin{flushleft}
+\footnotesize Notes: Columns (1), (3), and (5) report the baseline fixed effects model in Equation~ref{eq:baseline}. Columns (2), (4), and (6) report the distributed lag model in Equation~ref{eq:lag}. All models include country and year fixed effects. Standard errors are clustered at the country level.
+\end{flushleft}
+\end{table}

@@ -1,0 +1,36 @@
+\begin{table}[htbp]
+   \caption{\label{tab:lag2_core} Lag-2 Core Fixed Effects Models}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:               & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2         & 0.165          & 0.698                & $-4.27\times 10^{-6}$\\    
+                           & (0.106)        & (0.791)              & (0.003)\\   
+      mobile\_l2           & 0.083          & 0.124                & 0.003$^{*}$\\   
+                           & (0.056)        & (0.564)              & (0.002)\\   
+      log\_gdp\_pc         & 3.74           & 25.7                 & 0.010\\   
+                           & (7.92)         & (64.0)               & (0.155)\\   
+      fertility            & 16.8$^{***}$   & 90.0$^{*}$           & 0.293$^{***}$\\   
+                           & (3.54)         & (44.7)               & (0.096)\\   
+      water                & -0.645$^{**}$  & -3.56                & -0.0007\\   
+                           & (0.308)        & (2.40)               & (0.007)\\   
+      sanitation           & -0.032         & 2.94                 & -0.009$^{*}$\\   
+                           & (0.235)        & (2.13)               & (0.005)\\   
+      Baseline mean        & 78.32          & 425.27               & 2.71\\  
+      Country FE           & Yes            & Yes                  & Yes\\  
+      Year FE              & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country              & Yes            & Yes                  & Yes\\  
+      year                 & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 952            & 931                  & 952\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}

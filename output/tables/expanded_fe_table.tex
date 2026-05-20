@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+   \caption{\label{tab:expanded_fe} Expanded Fixed Effects Models}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:               & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2         & 0.077          & 0.384                & -0.0006\\   
+                           & (0.101)        & (0.831)              & (0.003)\\   
+      mobile\_l2           & 0.071          & 0.156                & 0.003\\   
+                           & (0.061)        & (0.602)              & (0.002)\\   
+      log\_gdp\_pc         & 2.23           & 19.0                 & -0.025\\   
+                           & (8.24)         & (73.1)               & (0.171)\\   
+      fertility            & 18.2$^{***}$   & 86.8                 & 0.296$^{***}$\\   
+                           & (3.32)         & (51.9)               & (0.106)\\   
+      water                & -0.583$^{*}$   & -2.82                & 0.0008\\   
+                           & (0.310)        & (2.43)               & (0.007)\\   
+      sanitation           & 0.010          & 3.32                 & -0.006\\   
+                           & (0.210)        & (2.32)               & (0.005)\\   
+      hiv\_prev            & 0.060          & 7.42                 & -0.038\\   
+                           & (1.15)         & (16.9)               & (0.047)\\   
+      health\_exp          & -0.758$^{*}$   & 3.63                 & -0.018\\   
+                           & (0.447)        & (5.22)               & (0.013)\\   
+      Baseline mean        & 81.59          & 452.69               & 2.80\\  
+      Country FE           & Yes            & Yes                  & Yes\\  
+      Year FE              & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country              & Yes            & Yes                  & Yes\\  
+      year                 & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 866            & 845                  & 866\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}

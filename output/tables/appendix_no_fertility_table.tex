@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+   \caption{\label{tab:appendix_no_fertility} Appendix: Fixed Effects Models Excluding Fertility}
+   \centering
+   \begin{tabular}{lccc}
+      \tabularnewline \midrule \midrule
+      Dependent Variables: & u5\_mortality  & maternal\_mortality  & neonatal\_mortality\\   
+      Model:               & (1)            & (2)                  & (3)\\  
+      \midrule
+      \emph{Variables}\\
+      internet\_l2         & 0.389$^{***}$  & 1.94$^{*}$           & 0.004\\   
+                           & (0.132)        & (0.994)              & (0.003)\\   
+      mobile\_l2           & 0.145$^{**}$   & 0.458                & 0.004$^{**}$\\   
+                           & (0.059)        & (0.480)              & (0.002)\\   
+      log\_gdp\_pc         & -4.89          & -24.1                & -0.140\\   
+                           & (8.14)         & (62.2)               & (0.172)\\   
+      water                & -0.870$^{**}$  & -4.93$^{*}$          & -0.005\\   
+                           & (0.382)        & (2.61)               & (0.007)\\   
+      sanitation           & -0.227         & 1.79                 & -0.013$^{**}$\\   
+                           & (0.288)        & (1.95)               & (0.006)\\   
+      Baseline mean        & 78.32          & 425.27               & 2.71\\  
+      Country FE           & Yes            & Yes                  & Yes\\  
+      Year FE              & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fixed-effects}\\
+      country              & Yes            & Yes                  & Yes\\  
+      year                 & Yes            & Yes                  & Yes\\  
+      \midrule
+      \emph{Fit statistics}\\
+      Observations         & 952            & 931                  & 952\\  
+      \midrule \midrule
+      \multicolumn{4}{l}{\emph{Clustered (country) standard-errors in parentheses}}\\
+      \multicolumn{4}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+   \end{tabular}
+\end{table}
