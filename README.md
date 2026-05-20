@@ -144,11 +144,11 @@ All references are included in:
 `paper/references.bib`
 
 Key literature includes:
-- Grossman (1972) — Health production function  
-- Cutler et al. (2006) — Health and economic development  
-- Aker & Mbiti (2010) — Mobile phones in Africa  
-- Labrique et al. (2013) — Digital health systems  
-- Hjort & Tian (2019) — Digital technology and development  
+- Grossman (1972); Health production function  
+- Cutler et al. (2006); Health and economic development  
+- Aker & Mbiti (2010); Mobile phones in Africa  
+- Labrique et al. (2013); Digital health systems  
+- Hjort & Tian (2019); Digital technology and development  
 - WHO Digital Health Strategy (2020–2025)  
 
 ## Author
