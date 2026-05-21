@@ -1,0 +1,647 @@
+\documentclass[12pt]{article}
+ 
+%%%%%%%%%%%%%%%%%% General pagackages
+\usepackage{amssymb,amsmath,amsfonts,eurosym,ulem,graphicx,
+	caption,color,setspace,sectsty,comment,footmisc,
+	pdflscape,subcaption,array, multicol,multirow,tikz, bm,
+        booktabs, rotating, titling}
+\usepackage{enumitem}
+%%%%%%%%%%%%%%%%%%% Encoding
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%% Margins and Spacing
+\usepackage[left=1.0in,right=1.0in,top=1in,bottom=1in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+%%%%%%%%%%%%%%%%%% References
+\usepackage{natbib}
+\bibliographystyle{econ}
+%%%%%%%%%%%%%%%%%% Links
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\urlstyle{same} %makes url the same font as text, not courier default
+\newcommand{\doi}[1]{\url{#1}}
+%%%%%%%%%%%%%%%%%% tikz/diagrams
+\usetikzlibrary{arrows,shapes,positioning,intersections,calc}
+%%%%%%%%%%%%%%%%%% table formatting
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\normalem
+\makeatother
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%% Autoreference names
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Sub-section}
+\renewcommand{\figureautorefname}{Figure}
+\renewcommand{\tableautorefname}{Table}
+\renewcommand{\figureautorefname}{Figure}
+% equation numbering start at 1
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+%%%%%%%%%%%%%%%%%% Theorem Names
+\newtheorem{prop}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{result}{Result}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+
+%%%%%%%%%%%%%%%%%% Title Information
+%title page single spacing 
+\setstretch{1} 
+%subtitle command
+\newcommand{\subtitle}[1]{\posttitle{\par\end{center}\begin{center}\large#1\end{center}\vskip0.5em}}
+
+\title{Bricks and Bytes: Digital Capacity, Health System Complementarities, and Health Outcomes in Africa}
+
+\subtitle{University of Oklahoma\\Research in Economic Problems}
+\author{Todvwa Dlamini}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+
+
+\newpage
+\setstretch{1.75} 
+ 
+
+\section{Introduction}
+The majority of health systems in Sub-Saharan Africa seem to be facing considerable difficulties providing quality care for patients because of such issues as long commutes to clinics and hospitals, the lack of health personnel, and infrastructure problems, which result in preventable morbidity and mortality. Moreover, health outcomes in Sub-Saharan Africa seem to be highly dependent on the socioeconomic and infrastructural situation of individuals rather than their access to healthcare facilities.
+
+\medskip
+Over the last decades, the fast development of digital technologies seems to have transformed many spheres of our lives. In particular, technologies have become an indispensable tool for optimization and increase in efficiency in sectors like finance, education, retail, etc. Digital technologies (in particular mobile and telehealth applications) also seem to have high potential in transforming the health sector, especially for those regions, which face problems with the lack of health infrastructure and limited access to health facilities. In this respect, healthcare professionals consider digital healthcare as one of the most effective instruments that can solve problems related to limited access to healthcare facilities.
+
+\medskip
+However, at the moment there does not seem to be sufficient evidence supporting the impact of digital technologies on health outcomes. In the case of the African continent, digital technologies only produce positive outcomes if implemented in those regions with sufficient infrastructure and institutional capacity needed to benefit from it. In other regions, digital technologies do not seem to be useful enough due to such problems as limited internet access, low electricity supply, and lack of digital literacy, among others. Therefore, the connection between an increase in digital usage and health outcomes may be highly conditional depending on the existing condition in the health system.
+
+\medskip
+The theory behind this analysis may be found in the health production function, which assumes that health outcomes depend on multiple inputs necessary for producing them. These include medical care, public health, socioeconomic variables, and behaviors, among others. Traditional inputs for producing health outcomes (such as investments in healthcare, infrastructure, and health workforce, among others) play a critical role in improving health outcomes in a population. However, digital technology may also serve as input into the health production function, provided that it complements traditional factors (particularly, infrastructure).
+
+\medskip            
+There is another question from an economic perspective: should the government of poor countries invest more in physical infrastructure ("more bricks") or switch to using digital health technologies ("bytes")? While each of these policies may result in better quality of health services, at the moment there seems to be insufficient empirical evidence concerning the relation between physical and digital expansions of the health system. For example, there is still a lack of understanding of how digital technology relates to the traditional health inputs like infrastructure. In other words, digital healthcare technologies may work well in the presence of a suitable infrastructure but be quite useless without it.
+
+\medskip
+The main purpose of this study is to determine the effect of digital adoption on health outcomes and how this effect depends on health systems' infrastructures. This study will rely on data collected from a period of 2000-2022 in African countries. In this case, Internet and cell phone subscriptions will be used to estimate the effect of digital access on health outcomes such as mortality rate. This analysis will apply the technique of fixed effects and lagged digital factors to determine the desired impact. Specifically, the interaction of digital factors and capacity of health systems will be estimated.
+
+\medskip
+On a more general note, the results of this research may offer useful advice for policymakers regarding the strategy of investing in health infrastructure. At the same time, low-income regions face considerable financial challenges in terms of health systems. In this case, the government needs to choose either physical infrastructure or digital technologies to invest in. Such understanding of which policy works better in each case will allow the government to achieve better health outcomes. In terms of universal health coverage, this study will also make a contribution in the context of digital-physical inequality in developing economies.
+
+\section{Literature Review}
+
+\subsection{Health Production Function, Digital Capacity, and Complementarity of System Inputs}
+
+The relationship between health outcomes and health system inputs is often analysed through the health production function framework. \citet{grossman1972} conceptualizes health as a form of human capital generated through the combination of multiple inputs, including medical care, time, and environmental conditions. This perspective is central to the present study because it allows digital capacity to be understood as part of the broader input structure shaping population health.
+
+\medskip
+Subsequent contributions broaden this framework by showing that health is influenced not only by medical care but also by wider structural conditions such as education, sanitation, and income \citep{cutler2006}. This broader perspective is especially relevant in African settings, where persistent infrastructural deficits shape both access to care and the effectiveness of health interventions. As a result, assessing digital infrastructure without accounting for these structural conditions risks overstating its independent contribution.
+
+\subsection{Health System Capacity as a Constraint on Digital Effectiveness}
+
+The idea of health production also implies that health inputs are usually complements, not substitutes for one another. This, in turn, implies that the effect of an input is conditional upon the presence and quality of others. When speaking about digital health, improved communication or coordination may have limited effects if a healthcare system cannot use these advantages for service provision.
+
+\medskip
+Research on health systems consistently links stronger workforce capacity, improved infrastructure, and higher service quality to lower mortality rates \citep{who2007,kruk2018}. This suggests that digital tools alone are unlikely to transform health outcomes. Their contribution may instead lie in strengthening the efficiency and reach of existing health system resources.
+
+\subsection{Digital Health and Access to Care}
+
+The increased use of digital infrastructure technology has created new ways of cutting down barriers in accessing healthcare services and improving the efficiency of delivery. For instance, mobile phones reduce information frictions while improving communication channels, especially in emerging economies \citep{aker2010}. In addition, digital health initiatives have been shown to improve service coordination and enhance delivery systems \citep{labrique2013}. Moreover, aside from health care, digital technology has also led to economic development through productivity improvements and enhanced employment opportunities across the continent \citep{hjort2019}. These factors are important in the context of health care systems as they build the communications network for digital health initiatives.
+
+
+\medskip
+However, even though there is substantial evidence of improved coordination and access to health care through digital tools, the real issue remains in whether this leads to any actual improvement in health outcomes, such as reduced mortality rates. There seem to be links between these advancements and the overall health measures taken by the respective health care systems.
+
+\subsection{Digital Health Programs in Africa}
+
+The topic of digital health interventions in Africa becomes even more interesting due to its simultaneous expansion with weaknesses inherent to the local health care system. The introduction of telemedicine and mHealth has led to an increase in health care access and improved process coordination \citep{omaghomi2024,maita2024}.
+
+\medskip
+At the same time, implementation remains constrained by unreliable electricity, limited internet coverage, weak regulatory frameworks, and low digital literacy \citep{mbunge2022}. Emerging evidence suggests that digital health interventions tend to perform better when introduced alongside broader efforts to strengthen health systems \citep{victor2023}. This raises an important policy and empirical question: under what conditions does digital capacity translate into improved health outcomes?
+
+\subsection{Empirical Gap}
+
+Although existing research recognizes the potential of digital technologies to address inefficiencies in healthcare systems, much of the empirical literature focuses either on direct digital effects or on specific intervention-based case studies. Comparatively less attention has been given to the interaction between digital capacity and conventional health system inputs.
+
+\medskip
+This study addresses that gap by examining whether digital capacity and traditional health system resources operate as complementary inputs in shaping health outcomes across African countries. Using panel data, the analysis shifts the focus from whether digital technologies matter to the conditions under which they become effective.
+
+\section{Conceptual Framework}
+
+It is assumed that the role of modern technologies (digital technology) in improving health results is played in a combination with existing health systems capacity, rather than independently from it. Although innovations within health care digitalization tools, such as telemedicine and apps or electronic health records, are termed 'leap frog innovations' in developing countries, the efficiency of those innovations critically depends on a set of conditions.
+
+\medskip
+In particular, health results depend on such related parameters as "bytes", "bricks", and demographic or environmental variables. Information flows (e.g., internet access and mobile connection rates) affecting health in a positive way determine digital capacity. By "bricks", one should understand the availability of resources available within the healthcare system, including its staff and service provision. As for demographic and environmental variables, those include fertility rate and access to water or sanitation facilities.
+
+\medskip
+Thus, in the model at hand, it is assumed that there is a complementary relationship between digital capacity and health results; i.e., their association is created via the effect of complementarity, rather than directly. Increase in digital capacity and information flows positively affects health systems efficiency, provided that the number of bricks is high enough. Otherwise, health results would not be influenced by increase in digital capacity.
+
+\medskip
+Consequently, it seems reasonable to formulate the following hypothesis: specifically, the digital capacity variables may show zero correlation even controlling for potential confounders in baseline regression models. In addition, this idea is consistent with the theory of diffusion suggesting that positive outcomes of technological innovation may occur only gradually during technological diffusion \citep{rogers2003}. In this case, digital health impact would depend not only on the process but also on the level of absorptive capacity. Furthermore, because of complementarity, the effect of digital capacity on health results is contingent on health system capacity; accordingly, there are interaction effects. Finally, there are gradual processes through which digital adoption influences health.
+
+\medskip
+As regards the theoretical framework of study, using the framework of health production functions might be helpful. In particular, in such a conceptualization, it is assumed that health results are the outcome of some inputs. Thus, in the present context, it might be stated that digital capacity ("bytes") and health system resources ("bricks") serve as the two main inputs determining health production. However, digital capacity cannot be examined separately from the bricks. In other words, it is assumed that digital capacity has complementarities with health system resources. This leads to conclusion that the marginal effect of digital capacity on health results becomes a function of bricks.
+
+\medskip
+In other words, the marginal effect of digital capacity ("bytes") on health production depends on the availability of bricks. Therefore, poorly-developed health systems would not benefit from increase in digital capacity, whereas well-developed ones would benefit greatly from digital innovations adoption.
+\section{Data}
+
+\subsection{Sources and Constructing the Dataset}
+
+The empirical analysis utilizes a panel dataset of Africa spanning 2000-2022. Dataset was created through the combination of country-year variables in the World Bank World Development Indicators database, WHO Data Platform, and Our World in Data portal \citep{worldbank_wdi, who_data, owid_data}. This allows for obtaining standardized data on such indicators as mortality rates, digital development, healthcare capabilities, demographics, and socio-economic conditions in Africa. The dataset was constructed according to health production function framework and consists of key inputs of the function, digital capacity ('bytes'), health system inputs ('bricks') and control variables related to socioeconomic development of the countries.
+
+\subsection{Main Variables}
+
+The dependent variable in the analysis is under-five mortality (death per 1,000 live births). It serves as the primary measure of population health and overall performance of the health systems in African countries. It is extensively used in health economics and development research because it is influenced by a broad range of factors, including healthcare accessibility, disease prevention, maternal care and socio-economic conditions. Moreover, the model will consider additional health outcomes, neonatal and maternal mortality in the extended specifications. Neonatal mortality covers the deaths occurring during the first 28 days after birth and is influenced by the quality of the pre-natal, delivery and post-natal care. Maternal mortality includes the deaths associated with pregnancy and deliveries and is influenced by the response of health system and the quality of reproductive health services.
+
+\medskip
+Two indicators are used to measure digital capacity in the model: number of Internet users (\% of population) and mobile cellular subscriptions per 100 people. Both variables capture the growth of communication infrastructure over time and serve as measures of the spread of digital technologies. Internet use reflects the accessibility of health-related information, communication capabilities of the households and use of e-health services, while mobile subscriptions are associated with the spread of communication and mobile health services. Because of the delayed effect of digital technologies on health, both of the digital indicators will be used with one lag.
+
+\medskip
+To analyze the effect of digital capacity on health outcomes more accurately, a range of additional control variables will be used to account for economic, demographic and infrastructural factors that affect population health. Per capita GDP is used as a measure of the level of economic development, fertility rate is used to measure demographic pressures and represents a key driver of demand for maternal and children health services. The access to improved water and sanitation represents another control variable that reflects the level of public health infrastructure and environment that also have direct effects on mortality. Finally, health expenditures are also included as another important control variable.
+
+\subsection{Descriptive Patterns and Trends}
+
+Figure \ref{fig:trends} demonstrates the time trends in selected key variables. Two major trends can be outlined based on the figures presented.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{trends.png}
+    \caption{Trends in Mortality}
+    \label{fig:trends}
+\end{figure}
+
+\medskip
+First, under-five mortality rate steadily decreases throughout the sample period, reaching 120 deaths per 1,000 live births in early 2000 and dropping below 60 in 2022. The results suggest major health improvements among African countries over the sample period. Second, digital capacity grows dramatically in the course of time. As can be seen from Figure \ref{fig:trends}, the number of mobile subscriptions increases substantially from almost zero in 2000 to universal coverage in 2022. Internet penetration increases at a slower pace, but accelerates after 2010. Similar trends can be seen for the majority of countries (Figure A1 in the Appendix).
+
+\medskip
+Overall, such trends imply a positive association between digital expansion and health improvements. At the same time, due to strong trending over time, the associations between variables should be estimated carefully in an econometric setting.
+
+
+\subsection{Bivariate Relationships}
+
+Figures \ref{fig:gdp_u5}, \ref{fig:mobile_u5}, and \ref{fig:internet_u5} illustrate the scatter plots between explanatory variables and under-five mortality.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gdp_u5.png}
+    \caption{GDP per Capita vs U5 Mortality Rate}
+    \label{fig:gdp_u5}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{mobile_u5.png}
+    \caption{Mobile Subscriptions vs U5 Mortality Rate}
+    \label{fig:mobile_u5}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{internet_u5.png}
+    \caption{Internet Use per vs U5 Mortality Rate}
+    \label{fig:internet_u5}
+\end{figure}
+
+\medskip
+The relationship between GDP per capita and under-five mortality is negative, implying that wealthier countries tend to have lower mortality levels. Similar relationships can be observed for mobile subscriptions and internet use, which suggests that more technologically advanced countries tend to have better population health. However, both of these relationships appear to be nonlinear and highly dispersed. At lower levels of income and penetration, small differences between countries lead to large differences in mortality, while at higher levels of development the marginal effects become smaller.
+
+
+
+\subsection{Correlation Structure}
+
+Figure \ref{fig:corr} represents a correlation matrix for the most important variables used in the model. Several interesting patterns can be observed. First, all three digital variables; internet usage, mobile subscriptions, and ICT Index, demonstrate a strong positive association with each other and with GDP per capita, suggesting that the process of digitalization in closely related to economic development.
+
+\medskip
+On the other hand, all health outcome variables demonstrate a strong negative correlation with the explanatory variables, implying that mortality rate is higher in developing countries that experience lower levels of technological development. In addition, fertility demonstrates high positive correlation with mortality and high negative correlation with the economic variables, thus serving as a useful control variable. Overall, such a structure of correlations raises issues of potential multicollinearity and omitted variable biases, thus motivating the use of more sophisticated techniques in further empirical estimations.
+
+\subsection{Missing Data and Sample Selection Issues}
+
+The problem of missing data is rather significant and differs for different indicators. Figure \ref{fig:missing_var} illustrates the share of missing values for the major indicators used in the study. Most noticeably, the health work force indicators suffer from extremely high missing values, exceeding 50\% in some cases, and therefore will be not be included in the core specification but analyzed in robustness tests if possible.
+
+\medskip
+From Figure~\ref{fig:missing_country_high}, we observe that the missing data problem occurs primarily within a few countries, namely Côte d'Ivoire, the Democratic Republic of Congo, Somalia, South Sudan, Eritrea, and Djibouti, instead of being evenly spread out throughout the dataset. The presence of such data gaps can be attributed to poor statistical capabilities, conflict interference, and weak reporting abilities of those particular countries. The missing values tend to occur mainly in four dimensions, which include GDP per capita, fertility rates, and workforces, comprising nurses and physicians.
+
+\medskip
+The key indicators, such as under-five mortality, mobile subscriptions and Internet usage demonstrate much lower levels of missing values and therefore are suitable for use in estimation. Figure \ref{fig:missing_time} shows that the missingness is relatively low and constant over time, however some periods experience fluctuations. At the same time, the use of lagged variables also reduces the sample size, since lags eliminate early time periods. Overall, such missingness motivates the use of unbalanced panels, with the number of observations varying by specifications.
+
+\subsection{Implications for Empirical Strategy}
+
+Several implications for further empirical work can be derived from the descriptive part of the analysis. First, strong trending over time in the major variables implies that there is a need to control for unobserved time effects and time shocks to eliminate them from estimation. Second, the observed nonlinear and dispersed relations between digital penetration and mortality call for using a more sophisticated statistical approach than simple linear regressions. 
+
+\medskip
+Third, the high correlation between digital capacity and economic development suggests that the effect of digital technologies on mortality cannot be interpreted in isolation from other development determinants. Fourth, the rapid growth of digital technologies over time suggests a need for considering their delayed effect in the models through the use of lags. All four features of the data motivate a more sophisticated statistical technique, taking into account the health production function framework.
+Citation audit (Data)
+
+
+\section{Methodology}
+
+\subsection{Empirical Framework}
+
+This investigation uses the health production function approach where health outcomes are produced using various inputs, including medical, infrastructural, and socio-economic inputs. Within this framework, health outcomes are dependent on the following explanatory variables: digital technology variables, health system capacity, and control variables:
+
+\begin{equation}
+H_{it} = f(D_{it}, S_{it}, X_{it})
+\end{equation}
+
+where $H_{it}$ - health outcomes for country $i$ in year $t$; $D_{it}$ - digital technology variables; $S_{it}$ - health system capacity variables; $X_{it}$ - control variables.
+
+Accordingly, within the proposed empirical model digital technology variables are considered as an additional input to increase the efficiency of health production. Nonetheless, the effect of digital technology variables is not supposed to be exogenous. It is believed that the impact of digital technology variables can depend on health system capacity, thus creating interaction between them.
+The primary approach used for estimating the association between digital technology variables and health outcomes is the two-way fixed effects regression:
+
+\begin{equation}
+H_{it} = \beta_1 D_{i,t-2} + \beta_2 S_{it} + \beta_3 (D_{i,t-2} \times S_{it}) + \gamma X_{it} + \alpha_i + \lambda_t + \varepsilon_{it}
+\end{equation}
+
+where $H_{it}$ is a health outcome variable, $D_{i,t-2}$ is a lagged digital technology variable, $S_{it}$ is a health system capacity variable, and $X_{it}$ is a set of control variables. Additionally, the terms $\alpha_i$ and $\lambda_t$ refer to country and year fixed effects, respectively. The coefficient $\beta_1$ captures the effect of digital technology variables on health outcomes with the assumption of minimal system capacity. The coefficient $\beta_3$ refers to the interaction effect capturing how the impact of digital technology variables changes when system capacity rises.
+
+
+\subsection{Baseline Fixed Effects Model}
+
+To estimate the effect of digital access on health outcomes, the present study proposes the following two-way fixed effects model:
+
+\begin{equation}
+H_{it} = \beta_1 Internet_{it} + \beta_2 Mobile_{it} + \gamma X_{it} + \alpha_i + \lambda_t + \varepsilon_{it}
+\label{eq:baseline}
+\end{equation}
+
+where $H_{it}$ - health outcome of country $i$ in year $t$ defined as under-five mortality rate, maternal mortality rate, and neonatal mortality rate, respectively. $Internet_{it}$ captures the share of internet users per one hundred individuals, whereas $Mobile_{it}$ captures the number of mobile subscriptions per one hundred individuals. $X_{it}$ - the vector of structural and socio-economic control variables consisting of GDP per capita, fertility rates, access to improved water sources, access to improved sanitation facilities, and health expenditure. The country fixed effects, $\alpha_i$, account for the country specific characteristics that do not change over time, whereas the year fixed effects, $\lambda_t$, account for common shocks or continent-wide changes in health and economic outcomes.
+
+\subsection{Interaction Model}
+
+To confirm the paper’s hypothesis about the complementarity nature of digital technologies, this paper estimates the following interaction effect:
+
+\begin{equation}
+H_{it} =
+\beta_1 Internet_{i,t-2}
++
+\beta_2 Workforce_{it}
++
+\beta_3 (Internet_{i,t-2} \times Workforce_{it})
++
+\gamma X_{it}
++
+\alpha_i
++
+\lambda_t
++
+\varepsilon_{it}
+\label{eq:interaction}
+\end{equation}
+
+where $Workforce_{it}$ is healthcare workforce capacity captured through the number of nurses per one thousand people. Positive and statistically significant coefficients $\beta_3$ capture the complementarity effect suggesting that digital technologies become more effective in increasing health outcomes with higher healthcare workforce capacity. By contrast, the negative value suggests substitutability effect, meaning that digital technologies may serve as a substitute for healthcare workers.
+
+
+\subsection{Lag Structure}
+
+Since the adoption of digital technologies does not have an instantaneous effect on health outcomes, two-year lags were applied for digital technology variables. Such a lag structure accounts for time that can be needed for deploying infrastructure, user adoption, and integrating it into the healthcare system of each country.
+
+\begin{equation}
+H_{it} =
+\sum_{k=0}^{2}\beta_k Internet_{i,t-k}
++
+\sum_{k=0}^{2}\delta_k Mobile_{i,t-k}
++
+\gamma X_{it}
++
+\alpha_i
++
+\lambda_t
++
+\varepsilon_{it}
+\label{eq:lag}
+\end{equation}
+
+In particular, the summation of coefficients over lag length $k$ captures a distributed lag structure where a health outcome $H_{it}$ depends not only on current but lagged digital technology variables. Accordingly, this approach allows us to account for gradual adjustments that occur after adoption of the new digital technologies.
+
+\medskip
+Two-way fixed effects regressions are employed for controlling for both unobserved and observed country-specific characteristics and trends over time. Thus, the country and year fixed effects are introduced into the regressions through $\alpha_i$ and $\lambda_t$, respectively. Clustered standard errors at the country-level are used to capture any potential serial correlation.
+
+\medskip
+Three health outcomes are investigated, namely under-five mortality (per one thousand live births), maternal mortality rate (per one hundred thousand live births), and neonatal mortality (per one thousand live births). As independent variables, digital technologies, including internet usage and mobile subscriptions, are introduced into the regressions. For measuring health system capacity, three different variables were introduced, namely health expenditure as a share of GDP, access to improved water sources, and improved sanitation facilities. Finally, the list of control variables includes fertility rate and GDP per capita.
+
+\subsection{Robustness Checks and Alternative Specifications}
+
+To test the robustness of the results, various alternative specifications were estimated. In particular, stepwise fixed effects models allowed the identification of coefficient changes as the number of control variables increased in the model. Furthermore, extended lag regressions allowed the identification of lag structures that are appropriate for explaining long-term impact of digital technologies. Similarly, models with first differences controlled for trending and non-stationary behavior of some series. Finally, logged health outcomes were also considered to check whether the results are sensitive to functional forms.
+
+Finally, event study models were estimated as exploratory evidence to identify dynamic effects around the threshold value of internet penetration. However, due to limited data and high collinearity among event-time dummies, such results should be regarded merely supportive rather than central evidence.
+
+
+\section{Results}
+
+This section provides the empirical results on the relationships between digital capacity, health system inputs, and health outcomes for the African countries. The results will be presented separately based on the three different health outcomes analyzed, under-five mortality, maternal mortality, and neonatal mortality. The analysis will involve baseline fixed effects models, distributed lag specifications, and interaction models in order to estimate the effect of digital capacity on health outcomes, as well as the interaction effect of digital capacity with health system resources. Interaction models are used as the main empirical specification since they allow examining the hypothesized complements.
+
+\subsection{Descriptive Analysis}
+
+Prior to analyzing the empirical results, it is beneficial to examine the descriptive patterns within the sample. In particular, Table~\ref{tab:summary_stats} presents summary statistics for the key variables of interest in this research. These statistics demonstrate considerable heterogeneity within the data in terms of health and digital capacity outcomes as well as health systems inputs. Specifically, average under-five mortality reaches about 82 deaths per 1,000 live births, while the average maternal mortality is around 450 deaths per 100,000 live births. These data are indicative of the ongoing issues with the preventable mortality across Africa. The average neonatal mortality equals to 2.82 deaths per 1,000 live births. Internet use averages at 15\% of the population in the region, while the number of mobile subscriptions stands at around 53 per 100 people. Finally, the average fertility rate is 4.61 children per woman, while only 65\% of the population have access to improved water sources, whereas 39\% have access to improved sanitation facilities. All these figures show that the growing digital technology capacity coexists with persistent structural problems within the health systems.
+
+The average trend lines for the selected three mortality rates during the period between 2000 and 2022 have been illustrated in Figure~\ref{fig:trends}. It can be seen that there is a considerable downward trend for all the variables, which suggests that the health conditions of the population have significantly improved during the whole period under investigation. The under-five mortality rate decreased from above 120 deaths per 1,000 live births to below 60 deaths per 1,000 live births. Likewise, maternal mortality has declined from around 550 deaths per 100,000 live births to 300 deaths per 100,000 live births.
+
+\medskip
+Figures~\ref{fig:gdp_u5}, \ref{fig:mobile_u5}, and \ref{fig:internet_u5} offer a first look at the relationship between mortality outcomes and economic and digital indicators across countries. More specifically, higher GDP per capita is associated with lower under-five mortality, which aligns with broader evidence in health economics and development. Internet use and mobile subscriptions also display negative associations with child mortality. In other words, countries with broader digital penetration also tend to report lower mortality rates. Yet these relationships remain sensitive to the inclusion of structural controls and vary across different levels of income and digital penetration.
+
+\medskip
+The correlation matrix in Appendix Figure~\ref{fig:corr} offers additional support for these descriptive patterns. Digital technology indicators are strongly positively associated with one another and with GDP per capita, reflecting the close connection between digital expansion and economic development. Mortality outcomes, in turn, are negatively associated with both income and digital access, while fertility rates are positively related to mortality. Together, these patterns suggest that the relationship between digital access and health cannot be interpreted in isolation from broader structural conditions.
+
+\medskip
+The appendix also provides further detail on data availability. Figures~\ref{fig:missing_var} and \ref{fig:missing_time} illustrate the distribution of missing observations across key variables. Workforce indicators such as hospital beds, physicians, and nurses account for the largest gaps, in some cases exceeding 50\% of observations. By comparison, the variables used in the baseline specifications have relatively limited missingness. This strengthens confidence in the baseline estimates while clarifying why interaction specifications rely on smaller samples.
+
+
+
+
+\begin{table}[H]
+\centering
+\label{tab:summary_stats}
+\input{summary_statistics.tex}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figure_outcome_trends_indexed.png}
+\caption{Trends in Health Outcomes (Indexed to 2000 = 100)}
+\label{fig:trends}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figure_u5_internet_trends_indexed.png}
+\caption{Internet Use and Under-5 Mortality Over Time}
+\label{fig:internet_mortality}
+\end{figure}
+
+\medskip
+This next section presents the empirical results on the associations between digital capacity and health outcomes. The results are presented separately for the three main outcome variables: under-five mortality, maternal mortality, and neonatal mortality. For each outcome, the discussion begins with the baseline and distributed lag fixed effects models and then moves to the interaction models. The interaction specifications are treated as the main empirical models because they directly test the paper’s central hypothesis: whether digital capacity and health workforce resources operate as complementary inputs in the production of health.
+
+\subsection{Under-Five Mortality Rate}
+
+Table~\ref{tab:baseline_distributed_lag} reports the baseline and distributed lag fixed effects estimates for under-five mortality. The objective here is to assess whether digital technology has an independent association with child survival and whether any such relationship unfolds gradually over time.
+
+\medskip
+However, in both cases, there appears to be no relationship between the independent variables of Internet and mobile subscriptions and mortality rates. They appear to lack statistical precision, and while the lagged value for Internet is positive, it lacks clear indication of any lagged relationship. When considered in totality, the statistics seem to indicate a very limited correlation between digital connectivity and child mortality, after accounting for the bigger picture.
+
+\medskip
+The broader structural environment appears far more consequential. Fertility remains strongly and positively associated with under-five mortality, with a coefficient of 16.25. Relative to the sample mean of 82 deaths per 1,000 live births, this corresponds to an increase of nearly 19.8\%. Access to improved water is negatively associated with child mortality, highlighting the continuing importance of basic public health infrastructure in shaping survival outcomes.
+
+\medskip
+Appendix Tables~\ref{tab:appendix_stepwise}, and \ref{tab:appendix_replace_fertility} further reinforce this pattern. As demographic and infrastructure controls enter the regressions, the digital coefficients become less informative, suggesting that the initial associations partly reflect broader development conditions. Appendix Table~\ref{tab:appendix_first_difference} reaches a similar conclusion, indicating that the main patterns are not simply driven by common trends. Table~\ref{tab:interaction} extends the analysis by introducing the interaction between internet access and nursing capacity. This specification explores whether digital access enhances the productivity of workforce resources.
+
+\medskip
+As regards under-five mortality, the interaction term still proves to be statistically insignificant. Though the effect coefficient is positive, there are no reasons to conclude that there exists a complementariness effect on children’s survival rates. One might say that knowledge about healthcare can help parents handle health problems related to children, although it will not influence formal healthcare efficiency.
+
+
+\begin{table}[H]
+\centering
+\label{tab:baseline_distributed_lag}
+\input{baseline_distributed_lag_table.tex}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\label{tab:interaction}
+\input{main_interaction_table.tex}
+\end{table}
+
+\subsection{Maternal Mortality Ratio}
+
+The maternal mortality estimates, also reported in Table~\ref{tab:baseline_distributed_lag}, show a different outlook. As before, the baseline and distributed lag models assess both immediate and delayed relationships between digital access and maternal health outcomes.
+
+\medskip
+Nevertheless, the direct estimates for internet usage and mobile subscriptions do not amount to much and have little statistical precision. Yet again, fertility emerges as a very important variable that influences maternal mortality. With a coefficient value of 86.14, there is an appreciable rise in the maternal mortality rate, taking into consideration the mean value of 404 per 100,000 live births.
+
+\medskip
+The lagged specifications in Table~\ref{tab:lag2_core} and the cumulative lag tests in Appendix Table~\ref{tab:joint_lag_tests} point in a similar direction. The delayed digital effect does not seem to have any material impact on maternal mortality on its own. The estimate of the interaction term in Table~\ref{tab:interaction} is, nevertheless, one of the clearest findings in this paper. Upon taking both internet usage and nursing capacity into account simultaneously, the interaction term takes on statistical significance and economic significance, too.
+
+\medskip
+In practical terms, this suggests complementarity rather than replacement. Digital tools can improve information sharing, appointment coordination, and awareness of maternal risks, but their contribution becomes meaningful only when paired with trained professionals capable of delivering care. In this setting, digital access appears to strengthen the functioning of maternal health services rather than substitute for them.
+
+\subsection{Neonatal Mortality Rate}
+
+This last set of estimates relates to neonatal mortality and is based on the same empirical framework. The estimates are provided in Table~\ref{tab:baseline_distributed_lag}.
+
+\medskip
+The baseline coefficients oncemore, show limited independent associations between digital access and neonatal survival. Internet and mobile indicators remain small in magnitude and statistically uncertain. Fertility continues to matter, with a coefficient of 0.290, which corresponds to a 10.3\% increase relative to the average neonatal mortality rate of 2.82 deaths per 1,000 live births. This suggests that demographic pressure remains closely linked to neonatal risks.
+
+\medskip
+The robustness exercises in Appendix Table~\ref{tab:appendix_logged_outcomes}, Appendix Table~\ref{tab:appendix_standardized}, and Appendix Table~\ref{tab:appendix_digital_index} all point to the same general pattern. Whether the specification changes in form or digital access is measured differently, the central relationship remains broadly unchanged. A different picture emerges once interaction effects are considered. In Table~\ref{tab:interaction}, the interaction between internet access and nursing capacity becomes statistically meaningful, suggesting that digital access contributes more clearly in settings where workforce capacity is stronger.
+
+\medskip
+Another reason for this could be that parents might use such platforms to identify signs or symptoms, get advice on the matter, or even determine whether they need to consult a professional about their child’s condition. Yet neonatal survival still depends heavily on clinical care and postnatal support. The evidence therefore points to digital access functioning alongside workforce capacity rather than operating independently.
+
+\subsection{Summary of Findings}
+
+Taken together, the empirical analysis points to a consistent pattern. Digital technology, when considered on its own, has limited explanatory power for mortality outcomes once structural controls and fixed effects are introduced. By contrast, fertility and basic health infrastructure remain among the most stable predictors across specifications. The interaction models, which form the central contribution of this paper, reveal a more nuanced relationship. For maternal and neonatal mortality, digital access becomes more relevant in the presence of workforce capacity, supporting the idea of complementarity between digital and traditional health inputs. For under-five mortality, the evidence is less precise and does not point to the same degree of interaction.
+
+\medskip
+All in all, the findings indicate that the use of technology does not act alone to enhance positive health outcomes but depends heavily on the prevailing healthcare environment and specifically the availability of well-trained health workers who can interpret the technology into action.
+
+
+\section{Conclusion and Policy Implications}
+In this paper, we have investigated the role of digital technology variables in determining health outcome indicators via a health production function framework. We used a panel dataset spanning from 2000 to 2022 to conduct two-way fixed effects estimations that capture the effect of the use of digital technologies and its interaction with health system capacity. With the help of lag structures and interaction variables, our empirical strategy allows us to measure not only the presence of digital technologies but also the situation where their effect emerges.
+
+\medskip
+The results provide little evidence that digital technology variables have an independent effect on health outcome indicators. When it comes to child, maternal, and neonatal mortality, internet use and mobile subscriptions coefficients are very small and insignificant in the regression models. In contrast, we found that the variables measuring the health system capacity and demographic characteristics, namely fertility and access to water, are consistent and significant predictors of health outcome indicators.
+
+\medskip
+The interaction results show that the effect of digital technologies is conditional upon the presence of health system capacity. Specifically, digital technology variables are positively related to health outcomes in the presence of strong health workforce capacity for maternal and neonatal mortality rates. These findings are consistent with a production function model with complementary inputs, which indicates that the digital technologies increase the efficiency of health system capacity inputs.
+
+\medskip
+From a policy perspective, the obtained results confirm the idea that investments in digital technologies alone do not guarantee improvements in the population's health status. Indeed, in the case of resource-constrained African countries, there is often an alternative to investing either in physical infrastructure or in digital technologies. As shown in this paper, investments in digital technology are productive only if they are integrated within developed health systems.
+
+\medskip
+This interpretation of our findings aligns well with the overall conceptualization of the findings within the WHO framework, focusing on health systems’ strengthening. Similarly, the WHO Global Strategy on Digital Health (2020-2025) defines digital technologies not as a replacement for health systems but rather as a means to strengthen health service delivery, improve coordination, and enhance accessibility by integrating into existing health systems frameworks \citep{who2021}.   Likewise, the national health strategies in Africa stress that digital technologies serve as instruments for improving the efficiency and coordination of health services in already-developed health care systems. Therefore, one can conclude that it is critical to invest simultaneously in digital technologies, physical infrastructure, and health workforce.
+
+\medskip
+It is important to note some weaknesses of this paper. In particular, because of the lack of detailed information, it was impossible to introduce comprehensive measures of health system capacity into our model. Thus, the sample size became smaller for some models with interaction terms. Furthermore, the use of digital technology variables that measure the availability of digital technology may bias the results towards attenuation. Finally, our results may suffer from endogeneity issues, even though the use of lag structures addressed them partially.
+
+\medskip
+Further refinement of the estimation technique would be to consider sub-national measures of health system capacity since national-level measures could conceal crucial heterogeneities regarding the health care facilities and delivery within the country. For instance, future work could focus more on measuring the health care capacity and quality of these measures. The impact of digital interventions on health outcomes can also be further explored in future work. The use of causal inference techniques that can account for endogeneity will also be useful in future studies.
+
+\medskip
+Another potential avenue for research would be to investigate the changing dynamic of the digital capacity and health outcomes over time. This is due to the rapid adoption of the internet after the year 2010 in Africa while the World Health Assembly had passed the eHealth resolution in 2005 urging its Member States to have long-term strategic plans to adopt eHealth systems \citep{WHA2005}. While this paper includes fixed effects at the country-year level, there is no differentiation as to whether the impact of digital capacity varies across different stages of adoption. The comparison of these two periods or even doing country-level case studies on how digital health innovations influence health outcomes or conducting the analysis based on whether or not the countries have already attained critical levels of internet and mobile penetration before achieving the positive impact on health could be considered.
+
+\newpage
+\appendix
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+\section*{Appendix}
+
+% Figure A1: Internet trends by country
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figure_internet_by_country.png}
+\caption{Internet Use Across African Countries}
+\label{fig:app_internet_country}
+\end{figure}
+
+% Figure A2: Correlation matrix
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\textwidth]{heat_correlatio.png}
+\caption{Correlation Matrix of Key Variables}
+\label{fig:corr}
+\end{figure}
+
+% Figure A3: Missingness by variable
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\textwidth]{missing_var.png}
+\caption{Percentage Missing by Variable}
+\label{fig:missing_var}
+\begin{flushleft}
+\footnotesize
+Note: This figure shows the percentage missingness for key variables, without restriction to country or year.
+\end{flushleft}
+\end{figure}
+
+% Figure A4: Missingness over time
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{missing_time.png}
+\caption{Missingness of Selected Variables Over Time}
+\label{fig:missing_time}
+\end{figure}
+
+% Figure A5: High missingness by country
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{figure_missingness_by_country_high.png}
+\caption{High Missingness of Key Variables by Country}
+\label{fig:missing_country_high}
+\begin{flushleft}
+\footnotesize
+Note: This figure shows country-level missingness for selected variables, restricted to country-variable combinations where more than 50\% of observations are missing.
+\end{flushleft}
+\end{figure}
+
+% Figure A6: Missingness by year
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{figure_missingness_by_year.png}
+\caption{Missingness of Key Variables by Year}
+\label{fig:missing_year}
+\begin{flushleft}
+\footnotesize
+Note: This figure shows how missingness varies over time across key variables.
+\end{flushleft}
+\end{figure}
+
+% Table A1: Stepwise fixed effects
+\begin{landscape}
+\begin{table}[p]
+\centering
+\caption{Stepwise Fixed Effects Models}
+\label{tab:appendix_stepwise}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\input{appendix_stepwise_table.tex}
+}
+\begin{flushleft}
+\footnotesize
+Notes: This table reports stepwise fixed effects models where covariates are added sequentially to evaluate coefficient stability. All models include country and year fixed effects. Standard errors are clustered at the country level.
+\end{flushleft}
+\end{table}
+\end{landscape}
+
+
+% Table A3: Replace fertility
+\begin{table}[H]
+\centering
+\label{tab:appendix_replace_fertility}
+\input{appendix_replace_fertility_table.tex}
+\end{table}
+
+% Table A4: Residualized fertility
+\begin{table}[H]
+\centering
+\label{tab:appendix_residual_fertility}
+\input{appendix_residual_fertility_table.tex}
+\end{table}
+
+% Table A5: Adolescent fertility
+\begin{table}[H]
+\centering
+\label{tab:appendix_adolescent_fertility}
+\input{appendix_adolescent_fertility_table.tex}
+\end{table}
+
+% Table A6: First difference
+\begin{table}[H]
+\centering
+\label{tab:appendix_first_difference}
+\input{appendix_first_difference_table.tex}
+\end{table}
+
+% Table A7: Extended lag models
+\begin{table}[H]
+\centering
+\label{tab:lag2_core}
+\input{lag2_core_table.tex}
+\end{table}
+
+% Table A8: Joint lag tests
+\begin{table}[H]
+\centering
+\label{tab:joint_lag_tests}
+\input{joint_lag_tests.tex}
+\end{table}
+
+% Table A9: Logged outcomes
+\begin{table}[H]
+\centering
+\label{tab:appendix_logged_outcomes}
+\input{appendix_logged_outcomes_table.tex}
+\end{table}
+
+% Table A10: Standardized coefficients
+\begin{table}[H]
+\centering
+\label{tab:appendix_standardized}
+\input{appendix_standardized_table.tex}
+\end{table}
+
+% Table A11: Digital capacity index
+\begin{table}[H]
+\centering
+\label{tab:appendix_digital_index}
+\input{appendix_digital_index_table.tex}
+\end{table}
+
+% Table A12: Lag mechanism
+\begin{table}[H]
+\centering
+\label{tab:lag_mechanism}
+\input{lag_mechanism_table.tex}
+\begin{flushleft}
+\footnotesize
+Note: This specification extends lag structures for digital and workforce variables to evaluate delayed complementarity effects over time.
+\end{flushleft}
+\end{table}
+
+% Table A13: Model selection
+\begin{table}[H]
+\centering
+\label{tab:model_selection}
+\input{model_selection_summary.tex}
+\end{table}
+
+% Table A14: Sample size audit
+\begin{table}[H]
+\centering
+\label{tab:sample_size_audit}
+\input{sample_size_audit.tex}
+\end{table}
+
+
+\newpage
+\singlespacing
+\bibliographystyle{econ}
+\bibliography{references}
+
+\end {document}
